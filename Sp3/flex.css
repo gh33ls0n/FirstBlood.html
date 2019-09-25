@@ -1,0 +1,65 @@
+body
+{
+    background: lightgray;
+}
+main
+{
+    width: 1200px;
+    /* marginesy całości żeby strona była na środku */
+    margin-left: auto;
+    margin-right: auto;
+}
+header
+{
+    /* height: 150px; */
+    /* żeby grafika nie była przyklejona do krawędzi */
+    padding: 10px;
+    background: lightblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* centruje w pionie menu z grafiką */
+}
+/* Każdy ul wewnątrz każdego nav -> nav ul {} (ze spacją pomiędzy  */
+
+nav
+{
+    width: 70%;
+}
+nav > ul /* ul wewnątrz nava ale tylko bezpośrednio pod nim  */
+{
+    /* zmiana punktorów (wyłączenie) */
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    display: flex;
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    justify-content: space-evenly;
+}
+section
+{
+    display: flex;
+}
+aside, #right
+{
+    width: 200px;
+    height: 700px;
+    background: lightskyblue;
+    
+}
+article 
+{
+    width: 800px;
+    height: 700px;
+    background: lightsteelblue;
+}
+#right
+{
+    background: lightgoldenrodyellow;
+    
+}
+footer
+{
+    height: 150px;
+    background: lightseagreen;
+}

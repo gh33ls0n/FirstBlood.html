@@ -1,0 +1,43 @@
+body
+{
+    background: lightblue;
+}
+main
+{
+    width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 150px 700px 150px;
+    /* grid-template-columns: 200px 800px 200px; dwie pozostałe podziel 4:1 */
+    grid-template-columns: 200px 4fr 1fr;
+    
+    grid-template-areas:
+        "header header header"
+        "aside article right"
+        "footer footer footer";
+}
+header
+{
+    background: lightseagreen;
+    grid-area: header;
+}
+aside
+{
+    background: lightskyblue;
+    grid-area: aside;
+}
+article
+{
+    background: lightgrey;
+    grid-area: article;
+}
+#right
+{
+    background: lightsteelblue;
+    grid-area: right;
+}
+footer
+{
+    background: lightslategrey;
+    grid-area: footer;
+}
