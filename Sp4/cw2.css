@@ -1,0 +1,18 @@
+main 
+{
+    width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns  : 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "grafika data data data data data data"
+    "data text logo text logo logo"
+    "text text access text access"
+    "access text tlo text tlo tlo"
+    "location location location tlo tlo";
+}
+#grafika
+{
+    background: black;
+}

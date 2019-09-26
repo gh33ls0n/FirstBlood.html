@@ -1,0 +1,80 @@
+main 
+{
+    width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 60px 140px 500px 200px 200px 80px;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    grid-template-areas:
+    "nav nav nav nav"
+    "header header header header"
+    "oferta1 oferta2 oferta2 oferta3"
+    "zdjecie zdjecie zdjecie zdjecie"
+    "uslugi1 uslugi1 uslugi2 uslugi2"
+    "stopka stopka stopka stopka";
+}
+nav
+{
+    background: lightblue;
+    grid-area: nav;
+}
+header
+{
+    background: lightsalmon;
+    grid-area: header;
+}
+
+#oferta1
+{
+    background: lightcoral;
+    grid-area: oferta1;
+}
+#oferta2
+{
+    background: lightcyan;
+    grid-area: oferta2;
+}
+#oferta3
+{
+    background: lightgoldenrodyellow;
+    grid-area: oferta3;
+}
+#zdjecie
+{
+    background: lightgray;
+    grid-area: zdjecie;
+}
+#uslugi1
+{
+    background: lightgreen;
+    grid-area: uslugi1;
+}
+#uslugi2
+{
+    background: red;
+    grid-area: uslugi2;
+}
+footer
+{
+    background: lightskyblue;
+    grid-area: stopka;
+}
+@media (max-width: 800px)
+{
+    main 
+    {
+        width: 100%;
+        grid-template-rows: 60px 140px 300px 300px 200px 120px 120px 80px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "nav nav"
+        "header header"
+        "oferta1 oferta2"
+        "oferta3 oferta3"
+        "zdjecie zdjecie"
+        "uslugi1 uslugi1"
+        "uslugi2 uslugi2"
+        "stopka stopka";
+        
+    }
+}
