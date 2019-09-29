@@ -3,16 +3,43 @@ main
     width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns  : 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-columns: 100px 100px 100px 100px 100px 100px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
-    "grafika data data data data data data"
-    "data text logo text logo logo"
-    "text text access text access"
-    "access text tlo text tlo tlo"
-    "location location location tlo tlo";
+    "nav header header header header header"
+    "header header header header header header"
+    "dostepnosc dostepnosc dostepnosc dostepnosc dostepnosc dostepnosc"
+    "czarny czarny czarny czarny czarny czarny"
+    "Lokacja Lokacja Lokacja Lokacja Lokacja Lokacja"
+    "napisy napisy napisy napisy napisy napisy";
 }
-#grafika
+nav
+{
+    background: lightblue;
+    grid-area: nav;
+}
+header
+{
+    background: lightsalmon;
+    grid-area: header;
+}
+#napisy
+{
+    background: lightcoral;
+    grid-area: napisy;
+}
+#dostepnosc
+{
+    background: lightcoral;
+    grid-area: dostepnosc;
+}
+#czarny
 {
     background: black;
+    grid-area: czarny;
+}
+footer
+{
+    background: lightcoral;
+    grid-area: Lokacja;
 }
