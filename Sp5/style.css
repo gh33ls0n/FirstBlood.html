@@ -1,0 +1,72 @@
+body
+{
+    background: lightgray;
+}
+div
+{
+    position: absolute;
+}
+main
+{
+    margin: 50px auto 0 auto;
+    width: 1200px;
+    height: 800px;
+    background: linear-gradient(to right, #1565C0, #b92b27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    position: relative; /* nic nie robi, nadaje się by position absolute był do maina zamiast do body  */
+}
+.kw
+{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+}
+#k1
+{
+    background: lightblue;
+    top: 0px;
+    left: 0px;
+    z-index: 4; /*zmienia widoczność elementów - im wyższa liczba tym bardziej na wierzchu */
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#k1:hover /* po najechaniu myszką */
+{
+    background: red;
+    width: 100px;
+    height: 100px;
+
+}
+#k2
+{
+    background: lightskyblue;
+    /* display: none; inne elementy go nie widzą, zastępują jego miejsce */
+    /* visibility: hidden; elementy go nie widzą, ale rezerwują dla mniego miejsce */
+    /* opacity: 0; */
+    left: 50px; /*oddal od prawej krawędzi o 0px */
+    top: 50px;
+    z-index: 3;
+}
+
+#k3
+{
+    background: lightsteelblue;
+    top: 100px;
+    left: 100px;
+    z-index: 2;
+}
+#k4
+{
+   background: #fff;
+   top: 150px;
+    left: 150px;
+    z-index: 1;
+}
+#cookies
+{
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background: rgba(0,0,0,0.5);
+    top: calc(50% - 50px);
+    /* element nie będzie się przewijał ze stroną */
+    position: fixed;
+}

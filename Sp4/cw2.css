@@ -1,45 +1,28 @@
-main 
-{
-    width: 1200px;
-    margin: 0 auto;
+main {
+    width: 100%;
     display: grid;
-    grid-template-columns: 100px 100px 100px 100px 100px 100px;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-    "nav header header header header header"
-    "header header header header header header"
-    "dostepnosc dostepnosc dostepnosc dostepnosc dostepnosc dostepnosc"
-    "czarny czarny czarny czarny czarny czarny"
-    "Lokacja Lokacja Lokacja Lokacja Lokacja Lokacja"
-    "napisy napisy napisy napisy napisy napisy";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "glogo"
+        "gdate"
+        "gnews"
+        "gnav"
+        "gcontact"
 }
-nav
-{
-    background: lightblue;
-    grid-area: nav;
+
+#logo {
+    grid-area: glogo;
 }
-header
-{
-    background: lightsalmon;
-    grid-area: header;
+#date {
+    grid-area: gdate;
 }
-#napisy
-{
-    background: lightcoral;
-    grid-area: napisy;
+#news {
+    grid-area: gnews;
 }
-#dostepnosc
-{
-    background: lightcoral;
-    grid-area: dostepnosc;
+nav {
+    grid-area: gnav;
 }
-#czarny
-{
-    background: black;
-    grid-area: czarny;
-}
-footer
-{
-    background: lightcoral;
-    grid-area: Lokacja;
+#contact {
+    grid-area: gcontact;
 }
