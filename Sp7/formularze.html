@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formularze</title>
+</head>
+<body>
+    <form action="https://rysiek.pl/sendmail.php" method="GET">
+        <input type="submit" value="Wyślij"><br>
+        <button type="button">Wyślij</button><br>
+        Wybierz plik: <input type="file" name="" id=""><br>
+        Wysukiwarka: <input type="text" pattern="" name="" placeholder="tu wpisz szukane hasło"><br>
+        Imię: <input type="text" name="imie" id=""><br>
+        Nazwisko: <input type="text" name="nazwisko" id="" autofocus><br>
+        Wiek: <input type="text" name="wiek" id=""><br>
+        Ilość: <input type="number" name="" id=""><br>
+        E-mail: <input type="email" required name="email" id=""><br>
+        Hasło: <input type="password" name="hasło"><br>
+        Regulamin: <input type="checkbox" name="Regulamin" id="Regulamin">
+        <label for="Regulamin">Akceptuje regulamin zakupów</label><br>
+        Płeć:
+        K <input type="radio" name="plec" id="" value="K">
+        M <input type="radio" name="plec" id="" value="M"><br>
+        Uwagi:
+        <textarea name="Uwagi" id="" cols="30" rows="10"></textarea><br>
+        <input type="hidden" name="tajnecos" value="tajnaliczba">
+        Wybierz kolor:
+        <select multiple size="2" name="" id="">
+            <option value="cz=">Czarny</option>
+            <option value="b=">Biały</option>
+            <option value="r=">Różowy</option>
+        </select>
+        <input type="reset" value="Wyczyść"><br>
+
+    </form>
+    
+</body>
+</html>
