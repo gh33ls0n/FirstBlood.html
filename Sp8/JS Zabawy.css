@@ -1,0 +1,24 @@
+body
+{
+    background: lightblue;
+}
+#pudelko
+{
+    width: 800px;
+    height: 600px;
+    margin: 50px auto;
+    background: lemonchiffon;
+}
+/* dopisanie w stylach !important sprawia że ta wartość jest ważniejsza */
+.czerwony
+{
+    background: red;
+}
+.lemonka
+{
+    background: lemonchiffon;
+}
+.hidden
+{
+    display: none;
+}

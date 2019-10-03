@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Slider</title>
+    <link rel="stylesheet" href="style.css">
+
+<!-- r.brzegowy@gmail.com -->
+
+<!-- ankietywsei.zurewebsites.net i kod a42c8 -->
+
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="slider">
+            <img src="img/m1.jpg" width="1200" alt="m1">
+            <img src="img/m2.jpg" width="1200" alt="m2">
+            <img src="img/m3.jpg" width="1200" alt="m3">
+            <img src="img/m4.jpg" width="1200" alt="m4">
+            <img src="img/m5.jpg" width="1200" alt="m5">
+        </div>
+    </div>
+    <p>
+        Image source: designbolts.com
+    </p>
+<!-- ///////////////////////////////////////////////////////////////// -->
+
+<script type="text/javascript">
+let slider = document.querySelector('#slider')
+let sliderLeft = 0
+let predkosc = -10
+
+animuj()
+
+function animuj() {
+    //slider.style.left = sliderLeft + 'px'
+    slider.style.transform ='translateX(' + sliderLeft + 'px)'
+    sliderLeft += predkosc
+    
+    if (sliderLeft < -6000 + document.body.offsetWidth) {
+        predkosc = 100
+        //   setTimeout(animuj, 16)
+    }
+    else if (sliderLeft > 0 ){
+        predkosc = - 10
+    }
+
+    requestAnimationFrame(animuj)
+}
+
+
+
+
+</script>
+    
+
+
+
+</body>
+
+</html>

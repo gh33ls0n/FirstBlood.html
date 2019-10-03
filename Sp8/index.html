@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Zabawy</title>
+    <link rel="stylesheet" href="JS Zabawy.css">
+    <!-- <script src=""></script> -->
+</head>
+<body>
+    <p>
+        <!-- oninput="zmienKolor()" pierwszy sposób na obsługę zdarzeń -->
+        Podaj kolor: <input type="text" name="" id="kolor" ><br>
+
+        <!-- Prycisk pokaż ukryj box -->
+        <button id="pokazUkryj">Pokaż ukryj Boxa</button>
+
+        <button id="odlicz">Odlicz do 10</button>
+        
+
+    </p>
+    <div id="pudelko" class="lemonka">
+
+
+    </div>
+    <script type="text/javascript">
+        // pobieramy obiekt #pudełko - box nazwa zmienniej którą deklarujemy
+        // let box = document.getElementById('pudelko')
+        let box = document.querySelector('#pudelko')
+        let kolorBox = document.querySelector('#kolor')
+        
+        // deklaracja zmiennej przycisku + dodanie nasłuchu zdarzenia 
+        let pokazUkryjBtn = document.getElementById('pokazUkryj')
+        pokazUkryjBtn.addEventListener('click', pokazUkryjBox)
+
+        kolorBox.addEventListener('ipput', zmienKolor)
+        box.innerHTML = '<b> Jee to działa </b>'
+    
+        let odliczBtn = document.querySelector('#odlicz')
+        odliczBtn.addEventListener('click', odliczanie)
+
+        // zmiana formatowania
+        box.style.backgroundColor = "red"
+    
+        //box.className += " czerwony"
+        box.classList.add('czerwony')
+        box.classList.remove('lemonka')
+       
+        // funkcja zmiany koloru
+        function zmienKolor()
+        {
+            console.log(kolorBox.value)
+            box.style.backgroundColor = kolorBox.value
+        }
+
+        // funkcja ukrywania boxa
+        function pokazUkryjBox(e)
+        {
+            console.log(e)
+            box.classList.toggle('hidden')
+        }
+        
+        // function odliczanie()
+        // {
+        //     for(let licznik =1; licznik <11; licznik++)
+        //     {
+        //         box.innerHTML += '<br>' + licznik
+        //     }
+        // }
+
+        let licznik = 1
+        let licznikInterval
+
+
+
+        // function odliczanie()
+        // {
+        //     if(licznikInterval)
+        //     {
+        //         clearInterval(licznikInterval)
+        //         licznikInterval = undefined
+        //     }
+        //     else
+        //     {
+        //         licznikInterval = setInterval(wypiszLicznik, 1000)
+                
+        //     }
+        // }
+         function wypiszLicznik()
+         {
+             box.innerHTML += '<br>' + licznik
+             licznik++
+         }
+
+        function odliczanie()
+        {
+            if(licznik<11)
+            {
+                wypiszLicznik()
+                setTimeout(odliczanie, 300)
+            }
+        }
+        function wypiszLicznik()
+        {
+             box.innerHTML += '<br>' + licznik
+             licznik++
+        }
+
+
+
+
+    </script>
+</body>
+</html>
